@@ -60,7 +60,7 @@ if par.pretrained_flownet and not par.resume:
 	if use_cuda:
 		pretrained_w = torch.load(par.pretrained_flownet)
 	else:
-		pretrained_w = torch.load(par.pretrained_flownet_flownet, map_location='cpu')
+		pretrained_w = torch.load(par.pretrained_flownet, map_location='cpu')
 	print('Load FlowNet pretrained model')
 	# Use only conv-layer-part of FlowNet as CNN for DeepVO
 	model_dict = M_deepvo.state_dict()
